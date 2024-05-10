@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-primary: #232528;
+    --green: #6bf178;
+    --red: #fe5f55;
+    --blue: #2978a0;
+
+    --txt-primary: #eaf6ff;
+    --txt-green: #6bf178;
+    --txt-red: #fe5f55;
+    --txt-blue: #2978a0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Poppins, sans-serif;
+    color: var(--txt-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* MAIN */
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 80rem;
+    height: 50rem;
+    border: 1px solid #333;
+    background: var(--bg-primary);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+}
+
+/* TASK */
+.task-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.task-container {
+    --padding-and-scroll-width: 2px;
+    display: grid;
+    gap: 10px;
+    margin-right: 2px;
+    overflow-y: auto;
+    padding-right: 15px;
+    
+}
+
+.task-container::-webkit-scrollbar {
+    width: var(--padding-and-scroll-width);
+    border-radius: 5px;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--blue);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    height: 50px;
+    vertical-align: center;
+   
+}
+
+.task-text {
+    font-size: 1.6rem;
+    color: var(--txt-primary)
+}
+
+/* EDIT / DELETE BUTTONS */
+
+.task-buttons {
+
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button, .delete-button {
+    background: transparent;
+    border: none;
+    color: var(--txt-primary);
+    width: 70px;
+    padding: .3rem;
+    border-radius: 3px;
+}
+
+.edit-button {
+    background: var(--blue);
+}
+
+.delete-button {
+    background: var(--red);
+}
+
+/* INPUTS */
+.inputs {
+    border-top: 1px solid #eaf6ff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-text {
+    width: 70ch;
+    height: 35px;
+    padding: 0.3rem 0.7rem;
+    border: none;
+    background-color: #b3b3b3;
+    border-radius: 15px;
+}
+
+.input-text:focus {
+    outline: 2px solid #2978a0;
+    background-color: #fff;
+}
+
+.input-add-button {
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    background: var(--green);
+}
